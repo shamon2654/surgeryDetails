@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "083b07fa-e489-4693-8c73-8932d8adaec1",
+		"name": "Master Select",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30001350"
+	},
+	"item": [
+		{
+			"name": "GET ALL PROCEDURES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/GET ALL PROCEDURES?page=0&size=50",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GET ALL PROCEDURES"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/GET ALL PROCEDURES?page=0&size=50",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GET ALL PROCEDURES"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"response\": {\r\n        \"content\": [\r\n            {\r\n                \"id\": 16080,\r\n                \"text\": \"1 ml meso filler\",\r\n                \"code\": \"LAS001\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 9299,\r\n                \"text\": \"1 of the following diagnostic imaging studies ordered: chest x-ray, CT, Ultrasound, MRI, PET, or nuclear medicine scans (ML)\",\r\n                \"code\": \"3319F\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6717,\r\n                \"text\": \"1-stage distal hypospadias repair (with or without chordee or circumcision); with extensive dissection to correct chordee and urethroplasty with local skin flaps, skin graft patch, and/or island flap\",\r\n                \"code\": \"54328\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6714,\r\n                \"text\": \"1-stage distal hypospadias repair (with or without chordee or circumcision); with simple meatal advancement (eg, Magpi, V-flap)\",\r\n                \"code\": \"54322\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6715,\r\n                \"text\": \"1-stage distal hypospadias repair (with or without chordee or circumcision); with urethroplasty by local skin flaps (eg, flip-flap, prepucial flap)\",\r\n                \"code\": \"54324\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6716,\r\n                \"text\": \"1-stage distal hypospadias repair (with or without chordee or circumcision); with urethroplasty by local skin flaps and mobilization of urethra\",\r\n                \"code\": \"54326\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6719,\r\n                \"text\": \"1-stage perineal hypospadias repair requiring extensive dissection to correct chordee and urethroplasty by use of skin graft tube and/or island flap\",\r\n                \"code\": \"54336\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6718,\r\n                \"text\": \"1-stage proximal penile or penoscrotal hypospadias repair requiring extensive dissection to correct chordee and urethroplasty by use of skin graft tube and/or island flap\",\r\n                \"code\": \"54332\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4525,\r\n                \"text\": \"12-Lead ECG Performed (EM)\",\r\n                \"code\": \"3120F\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 16081,\r\n                \"text\": \"1ml filler\",\r\n                \"code\": \"LAS002\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14877,\r\n                \"text\": \"2-d cephalometric radiographic image - image capture only\",\r\n                \"code\": \"D0702\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14878,\r\n                \"text\": \"2-d oral/facial photographic image obtained intra-orally or extra-orally - image capture only\",\r\n                \"code\": \"D0703\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 16066,\r\n                \"text\": \"2019-ncov coronavirus, sars-cov-2/2019-ncov (covid-19), any technique, multiple types or subtypes (includes all targets), non-cdc\",\r\n                \"code\": \"U0002\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 16068,\r\n                \"text\": \"2019-ncov coronavirus, sars-cov-2/2019-ncov (covid-19), any technique, multiple types or subtypes (includes all targets), non-cdc, making use of high throughput technologies as described by cms-2020-01-r\",\r\n                \"code\": \"U0004\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14818,\r\n                \"text\": \"2d cephalometric radiographic image - acquisition, measurement and analysis\",\r\n                \"code\": \"D0340\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14819,\r\n                \"text\": \"2d oral/facial photographic image obtained intra-orally or extra-orally\",\r\n                \"code\": \"D0350\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14879,\r\n                \"text\": \"3-d photographic image - image capture only\",\r\n                \"code\": \"D0704\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 9423,\r\n                \"text\": \"3-dimensional conformal radiotherapy (3D-CRT) or intensity modulated radiation therapy (IMRT) received (PRCA)\",\r\n                \"code\": \"4165F\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14820,\r\n                \"text\": \"3d photographic image\",\r\n                \"code\": \"D0351\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 2842,\r\n                \"text\": \"7 standard field stereoscopic retinal photos with interpretation by an ophthalmologist or optometrist documented and reviewed; with evidence of retinopathy (DM)\",\r\n                \"code\": \"2024F\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14101,\r\n                \"text\": \"7 standard field stereoscopic retinal photos with interpretation by an ophthalmologist or optometrist documented and reviewed; without evidence of retinopathy (DM)\",\r\n                \"code\": \"2025F\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 15884,\r\n                \"text\": \"<50% of total number of a patient's outpatient ra encounters assessed\",\r\n                \"code\": \"M1008\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 15883,\r\n                \"text\": \">=50% of total number of a patient's outpatient ra encounters assessed\",\r\n                \"code\": \"M1007\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 15607,\r\n                \"text\": \"A model participant (ambulance supplier/provider), the beneficiary refuses services covered under the model (transport to an alternate destination/treatment in place)\",\r\n                \"code\": \"G2022\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 5431,\r\n                \"text\": \"Abdominal lymphadenectomy, regional, including celiac, gastric, portal, peripancreatic, with or without para-aortic and vena caval nodes (List separately in addition to code for primary procedure)\",\r\n                \"code\": \"38747\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12742,\r\n                \"text\": \"Abdominal paracentesis (diagnostic or therapeutic); with imaging guidance\",\r\n                \"code\": \"49083\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12741,\r\n                \"text\": \"Abdominal paracentesis (diagnostic or therapeutic); without imaging guidance\",\r\n                \"code\": \"49082\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6544,\r\n                \"text\": \"Abdomino-vaginal vesical neck suspension, with or without endoscopic control (eg, Stamey, Raz, modified Pereyra)\",\r\n                \"code\": \"51845\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14156,\r\n                \"text\": \"Ablation of malignant prostate tissue, transrectal, with high intensity-focused ultrasound (HIFU), including ultrasound guidance\",\r\n                \"code\": \"55880\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12445,\r\n                \"text\": \"Ablation therapy for reduction or eradication of 1 or more bone tumors (eg, metastasis) including adjacent soft tissue when involved by tumor extension, percutaneous, including imaging guidance when performed; cryoablation\",\r\n                \"code\": \"20983\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 2912,\r\n                \"text\": \"Ablation therapy for reduction or eradication of 1 or more bone tumors (eg, metastasis) including adjacent soft tissue when involved by tumor extension, percutaneous, including imaging guidance when performed; radiofrequency\",\r\n                \"code\": \"20982\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12526,\r\n                \"text\": \"Ablation therapy for reduction or eradication of 1 or more pulmonary tumor(s) including pleura or chest wall when involved by tumor extension, percutaneous, including imaging guidance when performed, unilateral; cryoablation\",\r\n                \"code\": \"32994\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4745,\r\n                \"text\": \"Ablation therapy for reduction or eradication of 1 or more pulmonary tumor(s) including pleura or chest wall when involved by tumor extension, percutaneous, including imaging guidance when performed, unilateral; radiofrequency\",\r\n                \"code\": \"32998\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12726,\r\n                \"text\": \"Ablation, 1 or more liver tumor(s), percutaneous, cryoablation\",\r\n                \"code\": \"47383\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6176,\r\n                \"text\": \"Ablation, 1 or more liver tumor(s), percutaneous, radiofrequency\",\r\n                \"code\": \"47382\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6437,\r\n                \"text\": \"Ablation, 1 or more renal tumor(s), percutaneous, unilateral, radiofrequency\",\r\n                \"code\": \"50592\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 2772,\r\n                \"text\": \"Ablation, cryosurgical, of fibroadenoma, including ultrasound guidance, each fibroadenoma\",\r\n                \"code\": \"19105\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14041,\r\n                \"text\": \"Ablation, irreversible electroporation; 1 or more tumors per organ, including fluoroscopic and ultrasound guidance, when performed, open\",\r\n                \"code\": \"0601T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14040,\r\n                \"text\": \"Ablation, irreversible electroporation; 1 or more tumors per organ, including imaging guidance, when performed, percutaneous\",\r\n                \"code\": \"0600T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14022,\r\n                \"text\": \"Ablation, malignant breast tumor(s), percutaneous, cryotherapy, including imaging guidance when performed, unilateral\",\r\n                \"code\": \"0581T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6379,\r\n                \"text\": \"Ablation, open, 1 or more renal mass lesion(s), cryosurgical, including intraoperative ultrasound guidance and monitoring, if performed\",\r\n                \"code\": \"50250\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6175,\r\n                \"text\": \"Ablation, open, of 1 or more liver tumor(s); cryosurgical\",\r\n                \"code\": \"47381\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6174,\r\n                \"text\": \"Ablation, open, of 1 or more liver tumor(s); radiofrequency\",\r\n                \"code\": \"47380\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 13520,\r\n                \"text\": \"Ablation, percutaneous, cryoablation, includes imaging guidance; lower extremity distal/peripheral nerve\",\r\n                \"code\": \"0441T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 13521,\r\n                \"text\": \"Ablation, percutaneous, cryoablation, includes imaging guidance; nerve plexus or other truncal nerve (eg, brachial plexus, pudendal nerve)\",\r\n                \"code\": \"0442T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 13519,\r\n                \"text\": \"Ablation, percutaneous, cryoablation, includes imaging guidance; upper extremity distal/peripheral nerve\",\r\n                \"code\": \"0440T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6438,\r\n                \"text\": \"Ablation, renal tumor(s), unilateral, percutaneous, cryotherapy\",\r\n                \"code\": \"50593\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4479,\r\n                \"text\": \"Ablation, soft tissue of inferior turbinates, unilateral or bilateral, any method (eg, electrocautery, radiofrequency ablation, or tissue volume reduction); intramural (ie, submucosal)\",\r\n                \"code\": \"30802\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4478,\r\n                \"text\": \"Ablation, soft tissue of inferior turbinates, unilateral or bilateral, any method (eg, electrocautery, radiofrequency ablation, or tissue volume reduction); superficial\",\r\n                \"code\": \"30801\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 13571,\r\n                \"text\": \"Ablative laser treatment, non-contact, full field and fractional ablation, open wound, per day, total treatment surface area; each additional 20 sq cm, or part thereof (List separately in addition to code for primary procedure)\",\r\n                \"code\": \"0492T\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            }\r\n        ],\r\n        \"pageable\": {\r\n            \"pageNumber\": 0,\r\n            \"pageSize\": 50,\r\n            \"sort\": {\r\n                \"sorted\": false,\r\n                \"empty\": true,\r\n                \"unsorted\": true\r\n            },\r\n            \"offset\": 0,\r\n            \"paged\": true,\r\n            \"unpaged\": false\r\n        },\r\n        \"totalPages\": 221,\r\n        \"totalElements\": 11030,\r\n        \"last\": false,\r\n        \"number\": 0,\r\n        \"size\": 50,\r\n        \"numberOfElements\": 50,\r\n        \"sort\": {\r\n            \"sorted\": false,\r\n            \"empty\": true,\r\n            \"unsorted\": true\r\n        },\r\n        \"first\": true,\r\n        \"empty\": false\r\n    },\r\n    \"responseIndicator\": \"1\",\r\n    \"statusCode\": \"200\",\r\n    \"responseMessage\": \"FETCH SUCCESS\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL ANASTHESIA TYPE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/GET ALL ANASTHESIA TYPE?page=0&size=10",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GET ALL ANASTHESIA TYPE"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/GET ALL ANASTHESIA TYPE?page=0&size=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GET ALL ANASTHESIA TYPE"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"response\": {\r\n        \"content\": [\r\n            {\r\n                \"id\": 1,\r\n                \"text\": \"GENERAL ANESTHESIA\",\r\n                \"code\": \"A001\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"text\": \"LOCAL ANESTHESIA\",\r\n                \"code\": \"A002\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 3,\r\n                \"text\": \"SEDATION\",\r\n                \"code\": \"A003\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"text\": \"SPINAL ANESTHESIA\",\r\n                \"code\": \"A004\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 5,\r\n                \"text\": \"Epidural\",\r\n                \"code\": \"A005\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6,\r\n                \"text\": \"CSE\",\r\n                \"code\": \"A006\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 7,\r\n                \"text\": \"Nerve Block\",\r\n                \"code\": \"A007\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 8,\r\n                \"text\": \"Sedation\",\r\n                \"code\": \"A008\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 9,\r\n                \"text\": \"IVRA\",\r\n                \"code\": \"A009\",\r\n                \"departmentName\": null,\r\n                \"isReferral\": null\r\n            }\r\n        ],\r\n        \"pageable\": {\r\n            \"pageNumber\": 0,\r\n            \"pageSize\": 10,\r\n            \"sort\": {\r\n                \"sorted\": false,\r\n                \"empty\": true,\r\n                \"unsorted\": true\r\n            },\r\n            \"offset\": 0,\r\n            \"paged\": true,\r\n            \"unpaged\": false\r\n        },\r\n        \"totalPages\": 1,\r\n        \"totalElements\": 9,\r\n        \"last\": true,\r\n        \"number\": 0,\r\n        \"size\": 10,\r\n        \"numberOfElements\": 9,\r\n        \"sort\": {\r\n            \"sorted\": false,\r\n            \"empty\": true,\r\n            \"unsorted\": true\r\n        },\r\n        \"first\": true,\r\n        \"empty\": false\r\n    },\r\n    \"responseIndicator\": \"1\",\r\n    \"statusCode\": \"200\",\r\n    \"responseMessage\": \"FETCH SUCCESS\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL SURGEON",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/GET ALL SURGEON?page=0&size=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GET ALL SURGEON"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/GET ALL SURGEON?page=0&size=100",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GET ALL SURGEON"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"response\": {\r\n        \"content\": [\r\n            {\r\n                \"id\": 15,\r\n                \"text\": \"ABDELMOHSEN  ELSAYED MOHAMED HUSSEIN MADKOUR\",\r\n                \"code\": \"GD17209\",\r\n                \"departmentName\": \"INTERNAL MEDICINE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 26,\r\n                \"text\": \"AHMED ESSAMELDIN MOHARRAM\",\r\n                \"code\": \"GD6984\",\r\n                \"departmentName\": \"UROLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 24,\r\n                \"text\": \"AIDROOS HABEEB OMER AL AIDROOS\",\r\n                \"code\": \"GD25212\",\r\n                \"departmentName\": \"PSYCHIATRY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 17,\r\n                \"text\": \"AISHA MOHAMMED ELZAMZAMI ABDELRAZIG\",\r\n                \"code\": \"GD23191\",\r\n                \"departmentName\": \"GYNECOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 18,\r\n                \"text\": \"ASHRAF ABDEL RAHIM IBRAHIM\",\r\n                \"code\": \"GD23850\",\r\n                \"departmentName\": \"ORTHOPEDICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 20,\r\n                \"text\": \"ASHRAF NABIL AL HAJ ALI\",\r\n                \"code\": \"GD36311\",\r\n                \"departmentName\": \"OTOLARYNGOLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 10,\r\n                \"text\": \"ASMAA IBRAHIM ABDELWASSY  IBRAHIM  ABDELNAZIR\",\r\n                \"code\": \"GD38394\",\r\n                \"departmentName\": \"DERMATOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 7,\r\n                \"text\": \"DALIA WAHBA\",\r\n                \"code\": \"GD10377\",\r\n                \"departmentName\": \"ANESTHESIA\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 28,\r\n                \"text\": \"ELSY BIJU OOMMEN\",\r\n                \"code\": \"D3846\",\r\n                \"departmentName\": \"RADIOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"text\": \"Faiza othman elsayed othman elsayed elbadry\",\r\n                \"code\": \"GD24621\",\r\n                \"departmentName\": \"GENERAL PRACTICE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 5,\r\n                \"text\": \"HANADI  MAMOUN OSMAN IBRAHIM\",\r\n                \"code\": \"GD37639\",\r\n                \"departmentName\": \"GENERAL PRACTICE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6,\r\n                \"text\": \"HAYAM ALY ABDELHAMID SAYED AHMED\",\r\n                \"code\": \"GD24800\",\r\n                \"departmentName\": \"GENERAL PRACTICE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 35,\r\n                \"text\": \"HBT\",\r\n                \"code\": \"HBT01\",\r\n                \"departmentName\": \"GASTROENTEROLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14,\r\n                \"text\": \"IBTSAM SHEHTA HUSSEIN AZAB SHEHTA HUSSEIN AZAB HARIRA\",\r\n                \"code\": \"GD20187\",\r\n                \"departmentName\": \"GENERAL SURGERY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 25,\r\n                \"text\": \"KHALED AHMED MOHAMED AHMED  IBRAHIM\",\r\n                \"code\": \"GD43561\",\r\n                \"departmentName\": \"RADIOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 29,\r\n                \"text\": \"LASER\",\r\n                \"code\": \"LS001\",\r\n                \"departmentName\": \"DERMATOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 23,\r\n                \"text\": \"LOUBNA MOHIB AL NACHAR SALHA\",\r\n                \"code\": \"GD41049\",\r\n                \"departmentName\": \"PEDIATRICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 13,\r\n                \"text\": \"MANAL AHMED MOHAMED\",\r\n                \"code\": \"D5234\",\r\n                \"departmentName\": \"DENTAL DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 33,\r\n                \"text\": \"MANOJ  KOCHUKUNJU POOVELIL\",\r\n                \"code\": \"GD17690\",\r\n                \"departmentName\": \"DENTAL DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12,\r\n                \"text\": \"MARWAN RAJA FOTI  DADOUSH\",\r\n                \"code\": \"GD39596\",\r\n                \"departmentName\": \"GASTROENTEROLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 9,\r\n                \"text\": \"NARMIN MOHAMED MAHMOUD HUSSAIN MOHAMED MAHMOUD HUSSAIN\",\r\n                \"code\": \"GD37048\",\r\n                \"departmentName\": \"DERMATOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 19,\r\n                \"text\": \"OMER   SAFIELDIN  MOHAMED\",\r\n                \"code\": \"GD40228\",\r\n                \"departmentName\": \"ORTHOPEDICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 11,\r\n                \"text\": \"RASHA TAGELSIR ATTIA MAHMOUD TAGELSIR ATTIA MAHMOUD\",\r\n                \"code\": \"GD39484\",\r\n                \"departmentName\": \"FAMILY MEDICINE\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 27,\r\n                \"text\": \"ROCCAN  KHEDER\",\r\n                \"code\": \"GD43821\",\r\n                \"departmentName\": \"OTOLARYNGOLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 32,\r\n                \"text\": \"SALEH EL MAHDAWI\",\r\n                \"code\": \"GD8724\",\r\n                \"departmentName\": \"DENTAL DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 31,\r\n                \"text\": \"SAMMY  AL BENNA\",\r\n                \"code\": \"GD18521\",\r\n                \"departmentName\": \"PLASTIC SURGERY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 21,\r\n                \"text\": \"SHADI MEKAEL TARSHA\",\r\n                \"code\": \"GD10159\",\r\n                \"departmentName\": \"PEDIATRICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 16,\r\n                \"text\": \"WAFAA ABDELNABI GOMAA ALI GOMAA ALI ELSEIDI\",\r\n                \"code\": \"GD22283\",\r\n                \"departmentName\": \"GYNECOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 8,\r\n                \"text\": \"YARA FATHY MOHAMED  ELMASHHDY\",\r\n                \"code\": \"GD43048\",\r\n                \"departmentName\": \"CARDIOLOGY \",\r\n                \"isReferral\": null\r\n            }\r\n        ],\r\n        \"pageable\": {\r\n            \"pageNumber\": 0,\r\n            \"pageSize\": 100,\r\n            \"sort\": {\r\n                \"sorted\": false,\r\n                \"empty\": true,\r\n                \"unsorted\": true\r\n            },\r\n            \"offset\": 0,\r\n            \"paged\": true,\r\n            \"unpaged\": false\r\n        },\r\n        \"totalPages\": 1,\r\n        \"totalElements\": 29,\r\n        \"last\": true,\r\n        \"number\": 0,\r\n        \"size\": 100,\r\n        \"numberOfElements\": 29,\r\n        \"sort\": {\r\n            \"sorted\": false,\r\n            \"empty\": true,\r\n            \"unsorted\": true\r\n        },\r\n        \"first\": true,\r\n        \"empty\": false\r\n    },\r\n    \"responseIndicator\": \"1\",\r\n    \"statusCode\": \"200\",\r\n    \"responseMessage\": \"FETCH SUCCESS\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL ANASTHESIOLOGIST",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/GET ALL ANASTHESIOLOGIST?page=0&size=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GET ALL ANASTHESIOLOGIST"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/GET ALL ANASTHESIOLOGIST?page=0&size=100",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GET ALL ANASTHESIOLOGIST"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"response\": {\r\n        \"content\": [\r\n            {\r\n                \"id\": 15,\r\n                \"text\": \"ABDELMOHSEN  ELSAYED MOHAMED HUSSEIN MADKOUR\",\r\n                \"code\": \"GD17209\",\r\n                \"departmentName\": \"INTERNAL MEDICINE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 26,\r\n                \"text\": \"AHMED ESSAMELDIN MOHARRAM\",\r\n                \"code\": \"GD6984\",\r\n                \"departmentName\": \"UROLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 24,\r\n                \"text\": \"AIDROOS HABEEB OMER AL AIDROOS\",\r\n                \"code\": \"GD25212\",\r\n                \"departmentName\": \"PSYCHIATRY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 17,\r\n                \"text\": \"AISHA MOHAMMED ELZAMZAMI ABDELRAZIG\",\r\n                \"code\": \"GD23191\",\r\n                \"departmentName\": \"GYNECOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 18,\r\n                \"text\": \"ASHRAF ABDEL RAHIM IBRAHIM\",\r\n                \"code\": \"GD23850\",\r\n                \"departmentName\": \"ORTHOPEDICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 20,\r\n                \"text\": \"ASHRAF NABIL AL HAJ ALI\",\r\n                \"code\": \"GD36311\",\r\n                \"departmentName\": \"OTOLARYNGOLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 10,\r\n                \"text\": \"ASMAA IBRAHIM ABDELWASSY  IBRAHIM  ABDELNAZIR\",\r\n                \"code\": \"GD38394\",\r\n                \"departmentName\": \"DERMATOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 7,\r\n                \"text\": \"DALIA WAHBA\",\r\n                \"code\": \"GD10377\",\r\n                \"departmentName\": \"ANESTHESIA\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 28,\r\n                \"text\": \"ELSY BIJU OOMMEN\",\r\n                \"code\": \"D3846\",\r\n                \"departmentName\": \"RADIOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"text\": \"Faiza othman elsayed othman elsayed elbadry\",\r\n                \"code\": \"GD24621\",\r\n                \"departmentName\": \"GENERAL PRACTICE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 5,\r\n                \"text\": \"HANADI  MAMOUN OSMAN IBRAHIM\",\r\n                \"code\": \"GD37639\",\r\n                \"departmentName\": \"GENERAL PRACTICE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 6,\r\n                \"text\": \"HAYAM ALY ABDELHAMID SAYED AHMED\",\r\n                \"code\": \"GD24800\",\r\n                \"departmentName\": \"GENERAL PRACTICE DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 35,\r\n                \"text\": \"HBT\",\r\n                \"code\": \"HBT01\",\r\n                \"departmentName\": \"GASTROENTEROLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 14,\r\n                \"text\": \"IBTSAM SHEHTA HUSSEIN AZAB SHEHTA HUSSEIN AZAB HARIRA\",\r\n                \"code\": \"GD20187\",\r\n                \"departmentName\": \"GENERAL SURGERY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 25,\r\n                \"text\": \"KHALED AHMED MOHAMED AHMED  IBRAHIM\",\r\n                \"code\": \"GD43561\",\r\n                \"departmentName\": \"RADIOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 29,\r\n                \"text\": \"LASER\",\r\n                \"code\": \"LS001\",\r\n                \"departmentName\": \"DERMATOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 23,\r\n                \"text\": \"LOUBNA MOHIB AL NACHAR SALHA\",\r\n                \"code\": \"GD41049\",\r\n                \"departmentName\": \"PEDIATRICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 13,\r\n                \"text\": \"MANAL AHMED MOHAMED\",\r\n                \"code\": \"D5234\",\r\n                \"departmentName\": \"DENTAL DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 33,\r\n                \"text\": \"MANOJ  KOCHUKUNJU POOVELIL\",\r\n                \"code\": \"GD17690\",\r\n                \"departmentName\": \"DENTAL DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 12,\r\n                \"text\": \"MARWAN RAJA FOTI  DADOUSH\",\r\n                \"code\": \"GD39596\",\r\n                \"departmentName\": \"GASTROENTEROLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 9,\r\n                \"text\": \"NARMIN MOHAMED MAHMOUD HUSSAIN MOHAMED MAHMOUD HUSSAIN\",\r\n                \"code\": \"GD37048\",\r\n                \"departmentName\": \"DERMATOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 19,\r\n                \"text\": \"OMER   SAFIELDIN  MOHAMED\",\r\n                \"code\": \"GD40228\",\r\n                \"departmentName\": \"ORTHOPEDICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 11,\r\n                \"text\": \"RASHA TAGELSIR ATTIA MAHMOUD TAGELSIR ATTIA MAHMOUD\",\r\n                \"code\": \"GD39484\",\r\n                \"departmentName\": \"FAMILY MEDICINE\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 27,\r\n                \"text\": \"ROCCAN  KHEDER\",\r\n                \"code\": \"GD43821\",\r\n                \"departmentName\": \"OTOLARYNGOLOGY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 32,\r\n                \"text\": \"SALEH EL MAHDAWI\",\r\n                \"code\": \"GD8724\",\r\n                \"departmentName\": \"DENTAL DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 31,\r\n                \"text\": \"SAMMY  AL BENNA\",\r\n                \"code\": \"GD18521\",\r\n                \"departmentName\": \"PLASTIC SURGERY\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 21,\r\n                \"text\": \"SHADI MEKAEL TARSHA\",\r\n                \"code\": \"GD10159\",\r\n                \"departmentName\": \"PEDIATRICS DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 16,\r\n                \"text\": \"WAFAA ABDELNABI GOMAA ALI GOMAA ALI ELSEIDI\",\r\n                \"code\": \"GD22283\",\r\n                \"departmentName\": \"GYNECOLOGY DEPARTMENT\",\r\n                \"isReferral\": null\r\n            },\r\n            {\r\n                \"id\": 8,\r\n                \"text\": \"YARA FATHY MOHAMED  ELMASHHDY\",\r\n                \"code\": \"GD43048\",\r\n                \"departmentName\": \"CARDIOLOGY \",\r\n                \"isReferral\": null\r\n            }\r\n        ],\r\n        \"pageable\": {\r\n            \"pageNumber\": 0,\r\n            \"pageSize\": 100,\r\n            \"sort\": {\r\n                \"sorted\": false,\r\n                \"empty\": true,\r\n                \"unsorted\": true\r\n            },\r\n            \"offset\": 0,\r\n            \"paged\": true,\r\n            \"unpaged\": false\r\n        },\r\n        \"totalPages\": 1,\r\n        \"totalElements\": 29,\r\n        \"last\": true,\r\n        \"number\": 0,\r\n        \"size\": 100,\r\n        \"numberOfElements\": 29,\r\n        \"sort\": {\r\n            \"sorted\": false,\r\n            \"empty\": true,\r\n            \"unsorted\": true\r\n        },\r\n        \"first\": true,\r\n        \"empty\": false\r\n    },\r\n    \"responseIndicator\": \"1\",\r\n    \"statusCode\": \"200\",\r\n    \"responseMessage\": \"FETCH SUCCESS\"\r\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://a20a9b61-d74b-427f-b0d3-4a56ee5ca8bf.mock.pstmn.io"
+		}
+	]
+}

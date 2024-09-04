@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "1993f26a-1395-418f-97a9-d50d1fda7391",
+		"name": "Surgery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30001350"
+	},
+	"item": [
+		{
+			"name": "savesurgery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n\"plannedDateTime\": \"2024-08-03T12:00:00\",\r\n  \"duration\": 60,\r\n  \"procedureId\": 12376,\r\n  \"anesthesiaTypeId\": 1,\r\n  \"surgeonId\": 11,\r\n  \"anesthesiologistId\": 11,\r\n  \"surgeryDetails\": \"Sample surgery details\",\r\n  \"status\": 1,\r\n  \"planningEncTypeId\": 1,\r\n  \"reqEncTypeId\": 2,\r\n   \"ipVisitId\": 12345,\r\n  \"createdUserId\": 199,\r\n//   \"createdDate\": \"2023-08-10T14:20:00\"\r\n   \"requestedDoctorId\": 35\r\n//   \"visitId\": 789,\r\n//   \"modifiedUserId\": 789,\r\n//   \"modifiedDate\": \"2023-06-14T15:30:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/savesurgery",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"savesurgery"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n\"plannedDateTime\": \"2024-08-03T12:00:00\",\r\n  \"duration\": 60,\r\n  \"procedureId\": 12376,\r\n  \"anesthesiaTypeId\": 1,\r\n  \"surgeonId\": 11,\r\n  \"anesthesiologistId\": 11,\r\n  //\"surgeryDetails\": \"Sample surgery details\",\r\n  \"status\": 1,\r\n  \"planningEncTypeId\": 1,\r\n  \"reqEncTypeId\": 2,\r\n   \"ipVisitId\": 12345,\r\n  \"createdUserId\": 199,\r\n//   \"createdDate\": \"2023-08-10T14:20:00\"\r\n   \"requestedDoctorId\": 35\r\n//   \"visitId\": 789,\r\n//   \"modifiedUserId\": 789,\r\n//   \"modifiedDate\": \"2023-06-14T15:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/savesurgery",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"savesurgery"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"response\": {\r\n        \"id\": 229,\r\n        \"message\": \"Saved Successfully\"\r\n    },\r\n    \"responseIndicator\": \"1\",\r\n    \"statusCode\": \"200\",\r\n    \"responseMessage\": \"saved\"\r\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://2f6c754f-b64a-4e55-8f24-6743afa90267.mock.pstmn.io"
+		}
+	]
+}

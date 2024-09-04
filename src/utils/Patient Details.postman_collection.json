@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "17d75a43-425c-4a49-8d7a-0fad5e7f6a90",
+		"name": "Patient Details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30001350"
+	},
+	"item": [
+		{
+			"name": "GET DETAILS BY UHID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/GET DETAILS BY UHID?userName=BEENA&uhid=7456",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GET DETAILS BY UHID"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "BEENA"
+						},
+						{
+							"key": "uhid",
+							"value": "7456"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/GET DETAILS BY UHID?userName=BEENA&uhid=7456",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GET DETAILS BY UHID"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "BEENA"
+								},
+								{
+									"key": "uhid",
+									"value": "7456"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"response\": {\r\n        \"uhid\": \"7456\",\r\n        \"name\": \"MasXXXXXXXXXXXXXXXXXXX \",\r\n        \"dob\": \"24-01-2009\",\r\n        \"gender\": \"MALE\",\r\n        \"age\": \"15Y 7M 10D\",\r\n        \"opVisitDetails\": [\r\n            {\r\n                \"id\": 34388,\r\n                \"visitNo\": \"34388\",\r\n                \"uhid\": \"7456\",\r\n                \"patientName\": \"MasXXXXXXXXXXXXXXXXXXX\",\r\n                \"doctorName\": \"Dr.Beena James MD., MRCPCH(UK)\",\r\n                \"departmentName\": \"NEO-NATOLOGY AND PAEDIATRICS\",\r\n                \"visitDate\": \"04-04-2018 17:50\",\r\n                \"dischargedDate\": null,\r\n                \"status\": null\r\n            }\r\n        ],\r\n        \"ipVisitDetails\": []\r\n    },\r\n    \"responseIndicator\": \"1\",\r\n    \"statusCode\": \"200\",\r\n    \"responseMessage\": \"FETCH SUCCESS\"\r\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://da6a384d-6c18-4a20-a9cf-bada613116a1.mock.pstmn.io"
+		}
+	]
+}
