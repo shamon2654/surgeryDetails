@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react"
 import img1 from "../assets/pngtree-user-vector-avatar-png-image_1541962.jpg"
 import axios from "axios"
+import { validateDate } from "../utils/Validate"
 
 const Details = () => {
-  
-
   const [patientType, setPatientType] = useState({
     outpatient: false,
     inpatient: true,
   })
 
   const [date, setDate] = useState("")
+  const [dateError,setDateError] =useState("")
   const [time, setTime] = useState("")
   const [minutes, setMinutes] = useState("")
   const [selectProcedure, setSelectProcedure] = useState()
@@ -46,20 +46,15 @@ const Details = () => {
       setError(err.message)
     }
   }
-  
+
   const fetchAllProcedure = async () => {
     try {
-      const response = await axios.get(
-        `${baseURL}/GET ALL PROCEDURES`, {
-          params: {
-            page: 0,
-            size: 50,
-            
-          }
-        }
-        
-        
-      )
+      const response = await axios.get(`${baseURL}/GET ALL PROCEDURES`, {
+        params: {
+          page: 0,
+          size: 50,
+        },
+      })
       setProcedures(response.data.response.content)
     } catch (error) {
       setError(err.message)
@@ -67,54 +62,39 @@ const Details = () => {
   }
   const fetchAllAnesthesiaType = async () => {
     try {
-      const response = await axios.get(
-        `${baseURL}/GET ALL ANASTHESIA TYPE`, {
-          params: {
-            page: 0,
-            size: 10,
-          }
-        }
-        
-        
-      )
+      const response = await axios.get(`${baseURL}/GET ALL ANASTHESIA TYPE`, {
+        params: {
+          page: 0,
+          size: 10,
+        },
+      })
       setAnesthesiaTypes(response.data.response.content)
-      
     } catch (error) {
       setError(err.message)
     }
   }
   const fetchAllSurgeon = async () => {
     try {
-      const response = await axios.get(
-        `${baseURL}/GET ALL SURGEON`, {
-          params: {
-            page: 0,
-            size: 100,
-          }
-        }
-        
-        
-      )
+      const response = await axios.get(`${baseURL}/GET ALL SURGEON`, {
+        params: {
+          page: 0,
+          size: 100,
+        },
+      })
       setSurgeon(response.data.response.content)
-      
     } catch (error) {
       setError(err.message)
     }
   }
   const fetchAllAnasthesiologist = async () => {
     try {
-      const response = await axios.get(
-        `${baseURL}/GET ALL ANASTHESIOLOGIST`, {
-          params: {
-            page: 0,
-            size: 100,
-          }
-        }
-        
-        
-      )
+      const response = await axios.get(`${baseURL}/GET ALL ANASTHESIOLOGIST`, {
+        params: {
+          page: 0,
+          size: 100,
+        },
+      })
       setAnesthesiologists(response.data.response.content)
-      
     } catch (error) {
       setError(err.message)
     }
@@ -138,12 +118,19 @@ const Details = () => {
       newForm.append("surgeryDetails", details)
       newForm.append("planningEncTypeId", patientType)
       newForm.append("requestedDoctorId", selectDoctor)
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   }
- 
-  return (
+
+  return error ? (<div className="grid place-content-center min-h-[80vh]">
+    <div className="flex">
+
+    <div className="w-0 h-0 border-l-[32px] border-l-transparent border-r-[32px] border-r-transparent border-b-[56px] border-b-red-700 text-4xl relative " ><span className="absolute right-[-5px] top-2 "> !</span></div>
+      <p className="font-[500] text-3xl text-red-400">
+        
+      {error}
+    </p>
+    </div>
+  </div>): (
     <>
       <form onSubmit={handleSubmit}>
         <div className="w-full flex flex-col lg:flex-row">
@@ -159,10 +146,10 @@ const Details = () => {
                 <p className="font-bold">DOB/AGE:</p>
                 <p className="font-bold">GENDER:</p>
               </div>
-              <div  className="flex flex-col gap-3 lg:gap-5">
+              <div className="flex flex-col gap-3 lg:gap-5">
                 <p>{data.name}</p>
                 <p>{data.uhid}</p>
-                <p>{ data.dob }</p>
+                <p>{data.dob}</p>
                 <p>{data.gender}</p>
               </div>
             </div>
@@ -175,13 +162,21 @@ const Details = () => {
                 <p className="opacity-75">
                   Planned Date <span className="text-red-700 font-bold">*</span>
                 </p>
-                <div className="border rounded-md font-bold p-2 lg:p-3 h-24 flex items-center">
+                <div className="border rounded-md font-bold p-2 lg:p-3 h-24 flex  flex-col justify-center items-center">
                   <input
                     type="date"
                     value={date}
-                    onChange={(e) => setDate(e.target.value)}
+                    onChange={(e) => {
+                      setDate(e.target.value)
+                      
+                      setDateError(validateDate(e.target.value))
+                    }}
                     className="w-full"
                   />
+                  <div className="text-red-600">
+                    <p>{dateError}</p>
+                  </div>
+                  
                 </div>
               </div>
               <div>
@@ -192,7 +187,9 @@ const Details = () => {
                   <input
                     type="time"
                     value={time}
-                    onChange={(e) => setTime(e.target.value)}
+                    onChange={(e) => {
+                      setTime(e.target.value)
+                    }}
                     className="w-full"
                   />
                 </div>
