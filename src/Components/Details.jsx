@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react"
 import img1 from "../assets/pngtree-user-vector-avatar-png-image_1541962.jpg"
 import axios from "axios"
-import { validateDate } from "../utils/Validate"
+import {
+  validateAnesthesia,
+  validateAnesthesiologist,
+  validateDate,
+  validateDoctor,
+  validatePatientType,
+  validateProcedure,
+  validateSurgeon,
+} from "../utils/Validate"
 
 const Details = () => {
-  const [patientType, setPatientType] = useState({
-    outpatient: false,
-    inpatient: true,
-  })
+  const [patientType, setPatientType] = useState("")
 
   const [date, setDate] = useState("")
-  const [dateError,setDateError] =useState("")
+  const [dateError, setDateError] = useState("")
   const [time, setTime] = useState("")
   const [minutes, setMinutes] = useState("")
-  const [selectProcedure, setSelectProcedure] = useState()
+  const [selectProcedure, setSelectProcedure] = useState("")
   const [procedures, setProcedures] = useState([])
   const [surgeon, setSurgeon] = useState([])
   const [selectedSurgeon, setSelectedSurgeon] = useState()
@@ -26,6 +31,12 @@ const Details = () => {
   const [details, setDetails] = useState("")
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
+  const [procedureError, setProcedureError] = useState("")
+  const [surgeonError, setSurgeonError] = useState("")
+  const [anesthesiaTypeError, setAnesthesiaTypeError] = useState("")
+  const [anesthesiologistsError, setAnesthesiologistsError] = useState("")
+  const [doctorError, setDoctorError] = useState("")
+  const [patientTypeError, setPatientTypeError] = useState("")
 
   const baseURL = "https://a20a9b61-d74b-427f-b0d3-4a56ee5ca8bf.mock.pstmn.io"
 
@@ -56,7 +67,7 @@ const Details = () => {
         },
       })
       setProcedures(response.data.response.content)
-    } catch (error) {
+    } catch (err) {
       setError(err.message)
     }
   }
@@ -69,7 +80,7 @@ const Details = () => {
         },
       })
       setAnesthesiaTypes(response.data.response.content)
-    } catch (error) {
+    } catch (err) {
       setError(err.message)
     }
   }
@@ -82,7 +93,7 @@ const Details = () => {
         },
       })
       setSurgeon(response.data.response.content)
-    } catch (error) {
+    } catch (err) {
       setError(err.message)
     }
   }
@@ -95,7 +106,7 @@ const Details = () => {
         },
       })
       setAnesthesiologists(response.data.response.content)
-    } catch (error) {
+    } catch (err) {
       setError(err.message)
     }
   }
@@ -118,19 +129,32 @@ const Details = () => {
       newForm.append("surgeryDetails", details)
       newForm.append("planningEncTypeId", patientType)
       newForm.append("requestedDoctorId", selectDoctor)
+      setPatientTypeError(validatePatientType(patientType))
     } catch (error) {}
   }
 
-  return error ? (<div className="grid place-content-center min-h-[80vh]">
-    <div className="flex">
-
-    <div className="w-0 h-0 border-l-[32px] border-l-transparent border-r-[32px] border-r-transparent border-b-[56px] border-b-red-700 text-4xl relative " ><span className="absolute right-[-5px] top-2 "> !</span></div>
-      <p className="font-[500] text-3xl text-red-400">
-        
-      {error}
-    </p>
+  return error ? (
+    <div className="grid place-content-center min-h-[80vh]">
+      <div className="flex flex-col">
+        <div className="flex">
+          <div className="w-0 h-0 border-l-[32px] border-l-transparent border-r-[32px] border-r-transparent border-b-[56px] border-b-red-700 text-4xl relative ">
+            <span className="absolute right-[-5px] top-2 "> !</span>
+          </div>
+          <p className="font-[500] text-3xl text-red-400">{error}</p>
+          {/* Browser reload button */}
+        </div>
+        <p className="flex m-auto items-center text-4xl mt-8">please wait a moment and reload</p>
+        <div className="w-56 flex m-auto items-center">
+          <button
+            onClick={() => window.location.reload()} // Reload the browser when clicked
+            className="mt-4  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Reload Page
+          </button>
+        </div>
+      </div>
     </div>
-  </div>): (
+  ) : (
     <>
       <form onSubmit={handleSubmit}>
         <div className="w-full flex flex-col lg:flex-row">
@@ -168,7 +192,7 @@ const Details = () => {
                     value={date}
                     onChange={(e) => {
                       setDate(e.target.value)
-                      
+
                       setDateError(validateDate(e.target.value))
                     }}
                     className="w-full"
@@ -176,7 +200,6 @@ const Details = () => {
                   <div className="text-red-600">
                     <p>{dateError}</p>
                   </div>
-                  
                 </div>
               </div>
               <div>
@@ -224,14 +247,17 @@ const Details = () => {
                   Procedure <span className="text-red-700">*</span>
                 </p>
               </div>
+
               <div className="w-full flex justify-center border-2 h-12 rounded-md">
                 <select
                   value={selectProcedure}
-                  onChange={(e) => setSelectProcedure(e.target.value)}
+                  onChange={(e) => {
+                    setSelectProcedure(e.target.value)
+                    setProcedureError(validateProcedure(e.target.value))
+                  }}
                   className="w-full"
                   name=""
                   id=""
-                  required
                 >
                   <option value="none">Select procedure</option>
                   {procedures &&
@@ -242,6 +268,7 @@ const Details = () => {
                     ))}
                 </select>
               </div>
+              <p className="text-red-600">{procedureError}</p>
             </div>
             <div className="flex flex-col w-full">
               <div>
@@ -252,11 +279,13 @@ const Details = () => {
               <div className="w-full flex justify-center border-2 h-12 rounded-md">
                 <select
                   value={selectedSurgeon}
-                  onChange={(e) => setSelectedSurgeon(e.target.value)}
+                  onChange={(e) => {
+                    setSelectedSurgeon(e.target.value)
+                    setSurgeonError(validateSurgeon(e.target.value))
+                  }}
                   className="w-full"
                   name=""
                   id=""
-                  required
                 >
                   <option value="none">Select Surgeon</option>
                   {surgeon &&
@@ -267,6 +296,7 @@ const Details = () => {
                     ))}
                 </select>
               </div>
+              <p className="text-red-600">{surgeonError}</p>
             </div>
             <div className="flex flex-col w-full">
               <div>
@@ -277,11 +307,13 @@ const Details = () => {
               <div className="w-full flex justify-center border-2 h-12 rounded-md">
                 <select
                   value={selectAnesthesiaTypes}
-                  onChange={(e) => setSelectAnesthesiaTypes(e.target.value)}
+                  onChange={(e) => {
+                    setSelectAnesthesiaTypes(e.target.value)
+                    setAnesthesiaTypeError(validateAnesthesia(e.target.value))
+                  }}
                   className="w-full"
                   name=""
                   id=""
-                  required
                 >
                   <option value="none">Select Anesthesia Type</option>
                   {anesthesiaTypes &&
@@ -292,6 +324,7 @@ const Details = () => {
                     ))}
                 </select>
               </div>
+              <p className="text-red-600">{anesthesiaTypeError}</p>
             </div>
             <div className="flex flex-col w-full">
               <div>
@@ -302,11 +335,15 @@ const Details = () => {
               <div className="w-full flex justify-center border-2 h-12 rounded-md">
                 <select
                   value={selectAnesthesiologists}
-                  onChange={(e) => setSelectAnesthesiologists(e.target.value)}
+                  onChange={(e) => {
+                    setSelectAnesthesiologists(e.target.value)
+                    setAnesthesiologistsError(
+                      validateAnesthesiologist(e.target.value)
+                    )
+                  }}
                   className="w-full"
                   name=""
                   id=""
-                  required
                 >
                   <option value="none">Select Anesthesiologist</option>
                   {anesthesiologists &&
@@ -317,6 +354,7 @@ const Details = () => {
                     ))}
                 </select>
               </div>
+              <p className="text-red-600">{anesthesiologistsError}</p>
             </div>
           </div>
 
@@ -360,6 +398,9 @@ const Details = () => {
                   </label>
                 </div>
               </div>
+              {patientTypeError && (
+                <p className="text-red-600">{patientTypeError}</p>
+              )}
 
               <div className="mb-4">
                 <label className="block text-gray-700 mb-2 font-bold opacity-75">
@@ -380,7 +421,10 @@ const Details = () => {
                 </label>
                 <select
                   value={selectDoctor}
-                  onChange={(e) => setSelectDoctor(e.target.value)}
+                  onChange={(e) => {
+                    setSelectDoctor(e.target.value)
+                    setDoctorError(validateDoctor(e.target.value))
+                  }}
                   className="form-select mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-gray-500 focus:ring-gray-500"
                 >
                   <option value="none">Select Request Doctor</option>
@@ -392,6 +436,7 @@ const Details = () => {
                     ))}
                 </select>
               </div>
+              <p className="text-red-600">{doctorError}</p>
             </div>
           </div>
         </div>
