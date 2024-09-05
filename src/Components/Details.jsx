@@ -135,25 +135,24 @@ const Details = () => {
 
   return error ? (
     <div className="grid place-content-center min-h-[80vh]">
-      <div className="flex flex-col">
-        <div className="flex">
-          <div className="w-0 h-0 border-l-[32px] border-l-transparent border-r-[32px] border-r-transparent border-b-[56px] border-b-red-700 text-4xl relative ">
-            <span className="absolute right-[-5px] top-2 "> !</span>
-          </div>
-          <p className="font-[500] text-3xl text-red-400">{error}</p>
-          {/* Browser reload button */}
-        </div>
-        <p className="flex m-auto items-center text-4xl mt-8">please wait a moment and reload</p>
-        <div className="w-56 flex m-auto items-center">
-          <button
-            onClick={() => window.location.reload()} // Reload the browser when clicked
-            className="mt-4  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Reload Page
-          </button>
-        </div>
-      </div>
+  <div className="flex  items-center">
+        <div className="w-16 h-16 place-self-center border-4 border-red-400  rounded-full relative" >
+          <p className="absolute text-4xl flex items-center  px-5 py-2">!</p>
+  </div>
+      <p className="font-[500] text-3xl text-red-400 ml-4">{error}</p>
     </div>
+    <p className="text-4xl mt-8">Please wait a moment and reload</p>
+    <div className="w-56 flex justify-center mt-4">
+      <button
+        onClick={() => window.location.reload()} // Reload the browser when clicked
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Reload Page
+      </button>
+    </div>
+  </div>
+
+
   ) : (
     <>
       <form onSubmit={handleSubmit}>
